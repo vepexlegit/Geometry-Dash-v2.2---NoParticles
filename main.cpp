@@ -36,7 +36,7 @@ int main() {
     cout << "/////////////////////////////////" << endl;
 
     setColorAndStyle(11);
-    cout << endl << "Ââåäèòå ïóòü ê èãğå Geometry Dash: ";
+    cout << endl << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ÑƒÑ‚ÑŒ Ğº Ğ¸Ğ³Ñ€Ğµ Geometry Dash: ";
     setColorAndStyle(7);
 
     string gamePath;
@@ -46,12 +46,12 @@ int main() {
 
     DWORD attributes = GetFileAttributes(resourcesPath.c_str());
     if (attributes == INVALID_FILE_ATTRIBUTES || !(attributes & FILE_ATTRIBUTE_DIRECTORY)) {
-        cout << "Ïàïêè Resources íåò" << endl;
+        cout << "ĞŸĞ°Ğ¿ĞºĞ¸ Resources Ğ½ĞµÑ‚" << endl;
         return 1;
     }
 
     if (!checkInternetConnection()) {
-        cout << "Íåò ïîäêëş÷åíèÿ ê èíòåğíåòó" << endl;
+        cout << "ĞĞµÑ‚ Ğ¿Ğ¾Ğ´ĞºĞ»ÑÑ‡ĞµĞ½Ğ¸Ñ Ğº Ğ¸Ğ½Ñ‚ĞµÑ€Ğ½ĞµÑ‚Ñƒ" << endl;
         return 1;
     }
 
@@ -75,22 +75,22 @@ int main() {
         HRESULT hr = URLDownloadToFile(NULL, url.c_str(), filePath.c_str(), 0, NULL);
         if (SUCCEEDED(hr)) {
             setColorAndStyle(10);
-            cout << "Ôàéë ";
+            cout << "Ğ¤Ğ°Ğ¹Ğ» ";
             setColorAndStyle(14);
             cout << filename;
             setColorAndStyle(10);
-            cout << " - Óñïåøíî èçìåí¸í!" << endl;
+            cout << " - Ğ£ÑĞ¿ĞµÑˆĞ½Ğ¾ Ğ¸Ğ·Ğ¼ĞµĞ½Ñ‘Ğ½!" << endl;
         }
         else {
             setColorAndStyle(12);
-            cout << "Íå óäàëîñü çàãğóçèòü ôàéë: " << filename << endl;
+            cout << "ĞĞµ ÑƒĞ´Ğ°Ğ»Ğ¾ÑÑŒ Ğ·Ğ°Ğ³Ñ€ÑƒĞ·Ğ¸Ñ‚ÑŒ Ñ„Ğ°Ğ¹Ğ»: " << filename << endl;
         }
         setColorAndStyle(7);
     }
 
     cout << endl;
     setColorAndStyle(10);
-    cout << "Óñïåøíî!" << endl;
+    cout << "Ğ£ÑĞ¿ĞµÑˆĞ½Ğ¾!" << endl;
     setColorAndStyle(7);
     Sleep(3000);
 
